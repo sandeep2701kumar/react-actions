@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Welcome"
-        run echo "Welcome to second workflow in git"
+        run: echo "Welcome to second workflow in git"
   bye-jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Bye"
-        run echo "Bye from second workflow in git"      
+        run: echo "Bye from second workflow in git"      
