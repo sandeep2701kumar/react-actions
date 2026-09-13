@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
-        uses: actions/checkout@V4
+        uses: actions/checkout@v4
 
       - name: validate js code
         run: node --check script.js
