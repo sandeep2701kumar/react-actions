@@ -1,7 +1,7 @@
 name: Validate files
 on: workflow_dispatch
 jobs:
-  validate-file:
+  validate-html-file:
     runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
@@ -10,8 +10,20 @@ jobs:
       - name: validate html file
         run: test -f index.html
 
+  validate-js-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-repo-code
+        uses: actions/checkout@v4
+
       - name: validate js file
         run: test -f script.js
+
+  validate-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-repo-code
+        uses: actions/checkout@V4
 
       - name: validate js code
         run: node --check script.js
