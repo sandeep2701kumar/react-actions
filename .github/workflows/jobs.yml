@@ -1,5 +1,6 @@
 name: jobs test
-on: push
+on: 
+  push:
 jobs:
   validate-html:
     runs-on: ubuntu-latest
@@ -20,7 +21,7 @@ jobs:
         run: test -f script.js
 
   validate-code:
-    # needs: [validate html, validate js]
+    needs: [validate html, validate js]
     runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
