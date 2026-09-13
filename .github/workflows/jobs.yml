@@ -1,7 +1,7 @@
 name: jobs test
 on: push
 jobs:
-  validate html:
+  validate-html:
     runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
@@ -10,7 +10,7 @@ jobs:
       - name: validate html file
         run: test -f index.html
 
-  validate js:
+  validate-js:
     runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
@@ -19,7 +19,7 @@ jobs:
       - name: validate js file
         run: test -f script.js
 
-  validate code:
+  validate-code:
     # needs: [validate html, validate js]
     runs-on: ubuntu-latest
     steps:
